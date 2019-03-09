@@ -64,6 +64,21 @@
 
       <div class="col-md-6 col-xs-12">
         <h2> Prepare the data </h2>
+        <p><b>Reading the data from a file & changing the IV columns to a factor type </b></p>
+        <pre><code>
+        data &lt;-
+          read_csv("data/knobology_synthetic.csv", col_types = "cccd") %&gt;%
+          mutate(
+          device = as.factor(device),
+          vision = as.factor(vision))
+        </code></pre>
+      </div>
+
+      <div class="col-md-6 col-xs-12">
+        <h2> Formulating a model </h2>
+        <p style="color:green">Model function: <b>lm</b> (linear model), <b>lmer</b> (<code>import::from(lmerTest, lmer)</code>)</p>
+        <p style="color:blue">Dependent variable: <b>time</b></p>
+        <p style="color:red">Idependent variable: <b> vision, vision+device, vision*device </b> (= vision + device + vision:device), <b> (1|participant) + vision * device</b></p>
         <pre><code>
         data &lt;-
           read_csv("data/knobology_synthetic.csv", col_types = "cccd") %&gt;%
