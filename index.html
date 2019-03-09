@@ -63,13 +63,14 @@
       </div>
 
       <div class="col-md-6 col-xs-12">
-        <h2>More important information</h2>
-        <p>To get <code>&lt;-</code>&nbsp;:&nbsp;<kbd>Alt</kbd>+<kbd>+</kbd>+<kbd>-</kbd> </p>
-        <p>Create a new script: <kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> </p>
-        <p>Execute the current expression: <kbd>Cmd/Ctrl</kbd> + <kbd>Enter</kbd></p>
-        <p>Execute/rerun the complete script: <kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></p>
-        <p>Restart R Studio: <kbd>Cmd/Ctrl</kbd> +  <kbd>Shift</kbd> +  <kbd>F10</kbd></p>
-        <p>Press <kbd>F</kbd> to pay respect</p>
+        <h2> Prepare the data </h2>
+        <pre><code>
+        data &lt;-
+          read_csv("data/knobology_synthetic.csv", col_types = "cccd") %&gt;%
+          mutate(
+          device = as.factor(device),
+          vision = as.factor(vision))
+        </code></pre>
       </div>
 
 
