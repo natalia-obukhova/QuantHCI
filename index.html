@@ -44,49 +44,25 @@
   <div class="jumbotron">
     <div class="container">
       <h1 class="display-3">QuantHCI & R for Data Science</h1>
-      <p>This is a cheatsheet site for R for DataScience. </p>
+      <p>This is my blog on R for DataScience and Quantitative methods in HCI. </p>
 
     </div>
   </div>
 
   <div class="container">
 
+
     <div class="row">
-      <div class="col-md-6 col-xs-12">
-        <h2>Basic keyboard shortcuts</h2>
-        <p>To get <code>&lt;-</code>&nbsp;:&nbsp;<kbd>Alt</kbd>+<kbd>+</kbd>+<kbd>-</kbd> </p>
-        <p>Create a new script: <kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> </p>
-        <p>Execute the current expression: <kbd>Cmd/Ctrl</kbd> + <kbd>Enter</kbd></p>
-        <p>Execute/rerun the complete script: <kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></p>
-        <p>Restart R Studio: <kbd>Cmd/Ctrl</kbd> +  <kbd>Shift</kbd> +  <kbd>F10</kbd></p>
-        <p>Press <kbd>F</kbd> to pay respect</p>
+      <div class="col-md-12 col-xs-12">
+        <h2> Initial version </h2>
+        <p> Hi! I started to make a Cheatsheet here, and it looked like this: </p>
+        <img class="img-fluid" src="img.png">
+        <p> However, I found it a bit too hard to keep, so I decieded to continue storing it all locally in Bear notes: </p>
+        <img class="img-fluid" src="bear_18_03.png">
+        <p> So, as you can see, it allows me to keep all the images and code blocks in one place, making a new note for each topic.
+          Maybe in the future I will change the structure again, but as for now it seems to be quite convenient and easy! </p>
       </div>
-
-      <div class="col-md-6 col-xs-12">
-        <h2> Prepare the data </h2>
-        <p><b>Reading the data from a file & changing the IV columns to a factor type </b></p>
-        <pre><code>
-        data &lt;-
-          read_csv("data/knobology_synthetic.csv", col_types = "cccd") %&gt;%
-          mutate(
-          device = as.factor(device),
-          vision = as.factor(vision))
-        </code></pre>
-      </div>
-
-      <div class="col-md-6 col-xs-12">
-        <h2> Formulating a model </h2>
-        <p style="color:green">Model function: <b>lm</b> (linear model), <b>lmer</b> (<code>import::from(lmerTest, lmer)</code>)</p>
-        <p style="color:blue">Dependent variable: <b>time</b></p>
-        <p style="color:red">Idependent variable: <b> vision, vision+device, vision*device </b> (= vision + device + vision:device), <b> (1|participant) + vision * device</b></p>
-        <pre><code>
-        data &lt;-
-          read_csv("data/knobology_synthetic.csv", col_types = "cccd") %&gt;%
-          mutate(
-          device = as.factor(device),
-          vision = as.factor(vision))
-        </code></pre>
-      </div>
+    </div>
 
 
     <hr>
